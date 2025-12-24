@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saru Bala | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>Saru Bala</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <h1>Hi, I'm Saru Bala</h1>
+        <p>Java FullStack Developer | Fresher</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+       I am an aspiring Java Full Stack Developer passionate about building complete web applications.
+I am currently learning Java, Spring Boot, RESTful APIs, and MySQL for backend development.
+On the frontend, I am gaining skills in HTML, CSS, and JavaScript to create responsive and user-friendly interfaces.
+I enjoy working on projects that help me apply my learning and aim to grow as a full-stack developer.
+        </p>
+    </section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3 onclick="toggleSkill(this)">Java</h3>
+            <ul class="skill-content">
+                <li>OOP Concepts</li>
+                <li>Collections</li>
+                <li>Exception Handling</li>
+                <li>JDBC Basics</li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3 onclick="toggleSkill(this)">Spring Boot</h3>
+            <ul class="skill-content">
+                <li>REST API Development</li>
+                <li>CRUD Operations</li>
+                <li>Controller, Service, Repository</li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3 onclick="toggleSkill(this)">HTML, CSS, JavaScript</h3>
+            <ul class="skill-content">
+                <li>Responsive Design</li>
+                <li>Forms & Validation</li>
+                <li>DOM Manipulation</li>
+            </ul>
+        </div>
+
+        <div class="skill-card">
+            <h3 onclick="toggleSkill(this)">MySQL</h3>
+            <ul class="skill-content">
+                <li>CRUD Operations</li>
+                <li>Joins (INNER, LEFT)</li>
+                <li>Constraints</li>
+                <li>GROUP BY & HAVING</li>
+                <li>Subqueries</li>
+                <li>Normalization</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Movie Booking Application</h3>
+            <p>Spring Boot REST API with CRUD operations.</p>
+        </div>
+
+        <div class="project">
+            <h3>JWT Authentication System</h3>
+            <p>Login and signup using JWT in Spring Boot.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: Sarubala12300@gmail.com</p>
+        <p>phone no:8870380735</p>
+        <p>GitHub: github.com/yourusername</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
