@@ -1,0 +1,217 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #ECF0F1; /* light gray background for entire page */
+    color: #2C3E50;
+    line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C3E50;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav h2 {
+    color: #18BC9C;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ECF0F1;
+    padding: 7px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #18BC9C;
+    color: #fff;
+}
+
+/* Home Section with Background Image + Animation */
+#home {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://images.squarespace-cdn.com/content/v1/647ab8af3d46e2648eafd119/42653db4-4194-4e71-b0cf-13242761ab57/applications+background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px 80px 20px;
+    
+    /* Animation */
+    background-size: 110%; /* Start slightly zoomed in */
+    animation: zoomBg 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomBg {
+    0% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 120%;
+    }
+}
+
+#home h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+#home .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#home .btn:hover {
+    background-color: #18BC9C;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 30px;
+    color: #18BC9C;
+    font-size: 2rem;
+    position: relative;
+}
+
+/* Underline for headings */
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #18BC9C;
+    display: block;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* About Section */
+#about {
+    background-color: #FFFFFF;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #FFFFFF;
+}
+
+.project {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #F8F9FA;
+}
+
+#contact p {
+    margin: 12px 0;
+    font-size: 1.1rem;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+}
+
+.skill-card h3 {
+    color: #007bff;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.skill-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.skill-content li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+/* Responsive */
+@media(max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #skills ul {
+        flex-direction: column;
+    }
+
+    #skills ul li, .project {
+        max-width: 90%;
+    }
+}
